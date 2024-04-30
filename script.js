@@ -12,7 +12,9 @@ function convertToRoman(num) {
   //your code here
 	 let romanNumeral = '';
 
-    for (let [symbol, value] of romanSymbols) {
+    for (let i = 0; i < romanSymbols.length; i++) {
+        const [symbol, value] = romanSymbols[i];
+
         while (num >= value) {
             romanNumeral += symbol;
             num -= value;
@@ -20,8 +22,8 @@ function convertToRoman(num) {
     }
 
     return romanNumeral;
-
 }
+
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
 // console.log(convertToRoman(36));
