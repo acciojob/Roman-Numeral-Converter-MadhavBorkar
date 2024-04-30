@@ -9,11 +9,10 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
-  //your code here
-	 let romanNumeral = '';
+    let romanNumeral = '';
 
-    for (let i = 0; i < romanSymbols.length; i++) {
-        const [symbol, value] = romanSymbols[i];
+    for (let i = 0; i < Object.keys(obj).length; i++) {
+        const [symbol, value] = obj[i];
 
         while (num >= value) {
             romanNumeral += symbol;
@@ -27,9 +26,6 @@ function convertToRoman(num) {
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
 // console.log(convertToRoman(36));
-
-
-
 
 // do not edit below this line
 module.exports = convertToRoman
